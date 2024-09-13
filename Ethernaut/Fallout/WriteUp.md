@@ -56,7 +56,7 @@
 
 - The `collectAllocations()` function is a public function that allows the owner of the contract to collect all the Ether allocated to the contract. This function uses the onlyOwner modifier, which restricts access to only the owner of the contract. When called, it transfers the entire balance of the contract to the owner's wallet, effectively collecting all the allocations.
 
-```
+```solidity
     function allocatorBalance(address allocator) public view returns (uint256) {
         return allocations[allocator];
     }
