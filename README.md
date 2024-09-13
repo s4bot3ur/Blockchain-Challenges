@@ -14,3 +14,4 @@
 
 - [Hello Ethernaut](/Ethernaut/HelloEthernaut/README.md)
 - [Fallback](/Ethernaut/Fallback/WriteUp.md)
+- [Fallout](/Ethernaut/Fallout/WriteUp.md)
