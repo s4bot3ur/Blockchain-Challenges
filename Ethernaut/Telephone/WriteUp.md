@@ -8,7 +8,7 @@
 
 ### Contract Explanation
 
-- Click [here](Ethernaut/Telephone/src/contracts/Telephone.sol) to view the contract.
+- Click [here](./src/contracts/Telephone.sol) to view the contract.
 
 - If you feel like you understand the contract, you can move to the [exploit](#exploit) part. If you are a beginner, please go through the Contract Explanation as well. It will help you understand Solidity better.
 
@@ -97,7 +97,7 @@ contract Hello{
 
 - Similar to the previous challenge, if we write an exploit contract and call the `changeOwner()` function from the exploit contract, then `msg.sender` will be the address of the exploit contract and `tx.origin` will be our wallet address.
 
-- Click [here](/Exploit/ExploitCoinFlip.sol) to view the exploit contract. In Remix, during deployment, we need to provide the address of the `Telephone` contract as an argument to the constructor of the exploit contract.
+- Click [here](./Exploit/ExploitCoinFlip.sol) to view the exploit contract. In Remix, during deployment, we need to provide the address of the `Telephone` contract as an argument to the constructor of the exploit contract.
 
 - Deploy the exploit contract and call the `Exploit()` function in the **ExploitTelephone** contract.
 

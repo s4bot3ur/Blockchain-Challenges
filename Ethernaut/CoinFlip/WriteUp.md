@@ -8,7 +8,7 @@ This is a coin flipping game where you need to build up your winning streak by g
 
 ### Contract Explanation
 
-- Click [here](/src/contracts/CoinFlip.sol) to view the contract.
+- Click [here](./src/contracts/CoinFlip.sol) to view the contract.
 
 - If you feel like you understood the contract you can move to the [exploit](#exploit) part. If you are a begineer please go through contract Explaination also. It will help you to understand the solidity better.
 
@@ -92,7 +92,7 @@ function exploit() public {
 
 - To achieve 10 consecutive wins, we need to call the `exploit()` function 10 times to pass the level.
 
-- You can click [here](/Exploit/ExploitCoinFlip.sol) to view the exploit contract. In Remix, during deployment, we need to provide the address of the `CoinFlip` contract as an argument to the constructor of the exploit contract.
+- You can click [here](./Exploit/ExploitCoinFlip.sol) to view the exploit contract. In Remix, during deployment, we need to provide the address of the `CoinFlip` contract as an argument to the constructor of the exploit contract.
 
 - Once the 10 calls are completed, submit the level instance.
 

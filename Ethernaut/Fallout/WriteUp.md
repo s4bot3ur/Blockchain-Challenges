@@ -8,7 +8,7 @@
 
 ### Contract Explaination
 
-- Click [here](/src/contracts/Fallout.sol) to view the contract.
+- Click [here](./src/contracts/Fallout.sol) to view the contract.
 
 - If you feel like you understood the contract you can move to the [exploit](#exploit) part. If you are a begineer please go through contract Explaination also. It will help you to understand the solidity better.
 
