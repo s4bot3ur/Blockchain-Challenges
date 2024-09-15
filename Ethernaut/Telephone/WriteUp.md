@@ -8,7 +8,7 @@
 
 ### Contract Explanation
 
-- Click [here](/src/contracts/Telephone.sol) to view the contract.
+- Click [here](Ethernaut/Telephone/src/contracts/Telephone.sol) to view the contract.
 
 - If you feel like you understand the contract, you can move to the [exploit](#exploit) part. If you are a beginner, please go through the Contract Explanation as well. It will help you understand Solidity better.
 
