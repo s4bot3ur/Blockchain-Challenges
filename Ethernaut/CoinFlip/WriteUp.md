@@ -100,4 +100,4 @@ function exploit() public {
 
 - When interacting with a smart contract, multiple function calls within a single transaction are broadcasted and mined together. This ensures that all changes are applied at once or none at all. This is important for exploiting the CoinFlip contract because it allows us to predict the blockValue and make.
 
-- <p style="text-align:center;">***<strong>Hope you enjoyed this write-up. Keep on hacking and learning!</strong>***</p>
+<p style="text-align:center;">***<strong>Hope you enjoyed this write-up. Keep on hacking and learning!</strong>***</p>

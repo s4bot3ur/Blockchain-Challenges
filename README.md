@@ -16,3 +16,4 @@
 - [Fallback](/Ethernaut/Fallback/WriteUp.md)
 - [Fallout](/Ethernaut/Fallout/WriteUp.md)
 - [CoinFlip](/Ethernaut/CoinFlip/WriteUp.md)
+- [Telephone](/Ethernaut/Telephone/WriteUp.md)
