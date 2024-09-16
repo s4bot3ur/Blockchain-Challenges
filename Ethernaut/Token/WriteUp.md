@@ -1,4 +1,4 @@
-# Writeup for Telephone
+# Writeup for Token
 
 - Hello hacker, welcome to the world of smart contract hacking. Solving the challenges from Ethernaut will help you understand Solidity well. For each challenge, they will deploy the contract and provide us with the instance of that contract. Our task is to interact with the contract and exploit it. Don't worry if you are completely new to Solidity and have never deployed a smart contract before. You can learn how to deploy a contract using Remix [here](https://youtu.be/3xNFZI8Ste4?si=i3cWN87OpX85zp6k).
 
@@ -32,7 +32,7 @@
     }
 ```
 
-- The function `transfer()` is a public function that takes two addresses and an amount to transfer as input, and returns `true` if the transfer is successful.
+- The function `transfer()` is a public function that takes two arguments address and amount to transfer as input, and returns `true` if the transfer is successful.
 
 - First, it checks if the balance of `msg.sender` is more than the value they are transferring. If yes, it will continue executing the next lines; otherwise, it will revert.
 
