@@ -12,9 +12,10 @@
 
 #### Ethernaut
 
-- [Hello Ethernaut](/Ethernaut/HelloEthernaut/README.md)
-- [Fallback](/Ethernaut/Fallback/WriteUp.md)
-- [Fallout](/Ethernaut/Fallout/WriteUp.md)
-- [CoinFlip](/Ethernaut/CoinFlip/WriteUp.md)
-- [Telephone](/Ethernaut/Telephone/WriteUp.md)
-- [Token](/Ethernaut/Token/WriteUp.md)
+- [Hello Ethernaut](./Ethernaut/HelloEthernaut/README.md)
+- [Fallback](./Ethernaut/Fallback/WriteUp.md)
+- [Fallout](./Ethernaut/Fallout/WriteUp.md)
+- [CoinFlip](./Ethernaut/CoinFlip/WriteUp.md)
+- [Telephone](./Ethernaut/Telephone/WriteUp.md)
+- [Token](./Ethernaut/Token/WriteUp.md)
+- [Delegation](./Ethernaut/Delegation/WriteUp.md)
