@@ -53,7 +53,7 @@ In the ABI, we can't find the password. So now how can we get the password?
 
 Now for a moment, let's come out of this challenge and think about what blockchain is and what is so special about blockchain.
 
-You are right!! It's immutability and transparency. The entire data of a blockchain is public and anyonw will be able to see any transaction in the blockchain.
+You are right!! It's immutability and transparency. The entire data of a blockchain is public and anyone will be able to see any transaction in the blockchain.
 
 Now let's discuss the different types of variables in Solidity. There are three types of variables in Solidity.
 
