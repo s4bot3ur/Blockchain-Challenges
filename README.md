@@ -20,3 +20,4 @@
 - [Token](./Ethernaut/Token/WriteUp.md)
 - [Delegation](./Ethernaut/Delegation/WriteUp.md)
 - [Force](./Ethernaut/Force/WriteUp.md)
+- [Vault](./Ethernaut/Vault/WriteUp.md)
