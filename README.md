@@ -21,3 +21,4 @@
 - [Delegation](./Ethernaut/Delegation/WriteUp.md)
 - [Force](./Ethernaut/Force/WriteUp.md)
 - [Vault](./Ethernaut/Vault/WriteUp.md)
+- [King](./Ethernaut/King/WriteUp.md)
