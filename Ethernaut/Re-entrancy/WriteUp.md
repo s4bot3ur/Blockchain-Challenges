@@ -22,7 +22,7 @@ If you feel like you understand the contract, you can move to the [exploit](#exp
 
 Since the contract version is less than 0.8.0, they are using the `SafeMath` library to prevent overflows and underflows.
 
-The contract is storing balances of people who donated to the contract using a mapping from address to uint256, stored in a variable called `balances`.
+The contract stores balances of people who donated to the contract using a mapping from address to uint256, stored in a variable called `balances`.
 
 ```solidity
 function donate(address _to) public payable {
@@ -43,11 +43,11 @@ The function `balanceOf()` is a public view function, which means it only reads 
 ```solidity
 function withdraw(uint256 _amount) public {
     if (balances[msg.sender] >= _amount) {
-        (bool result,) = msg.sender.call{value: _amount}("");
+    (bool result,) = msg.sender.call{value: _amount}("");
         if (result) {
-            _amount;
+        _amount;
         }
-        balances[msg.sender] -= _amount;
+    balances[msg.sender] -= _amount;
     }
 }
 ```
@@ -64,7 +64,7 @@ The function `receive()` is a special function in Solidity. It is triggered when
 
 Before getting started with the exploit, I wanted to ask a question. What is the name of the challenge? REENTRANCY!! What does REENTRANCY mean? Basically entering again and again.
 
-If we observe the `withdraw()` function, when someone calls the withdraw function, it transfers them the ether and then updates the balance. But how is it transferring the ether and updating the balance?
+If we observe the `withdraw()` function, when someone calls the withdraw function, it transfers the ether and then updates the balance. But how is it transferring the ether and updating the balance?
 
 It is transferring the ether using the `low-level` call function. When transferring ether using a low-level call, if the receiver is an `Externally Owned Account` (EOA) account, the account will receive the ether. However, if the receiver is a contract account, the contract will only receive the ether if it has a `receive()` function. If there is no `receive()` function, the ether won't be transferred.
 
@@ -72,7 +72,7 @@ It is transferring the ether using the `low-level` call function. When transferr
 
 Now, what if we write some logic in our contract's `receive()` function to call the `withdraw()` function again? The `withdraw()` function will be called again before updating the balances of our first withdraw call, which means we still have the balances even after withdrawing. The checks in the `withdraw()` function for the second call will be passed, and our contract will receive the ether again. This process can continue indefinitely, but we will encounter an `out of gas` error.
 
-The `out of gas` error occurs because in a transaction, we can use a maximum of `3 million` gas. If we use more gas than the limit, we will get an error. As the logic we wrote creates an infinite loop, we need to change it so that we just drain the contract.
+The `out of gas` error occurs because, in a transaction, we can use a maximum of `3 million` gas. If we use more gas than the limit, we will get an error. As the logic we wrote creates an infinite loop, we need to change it so that we just drain the contract.
 
 Another thing to consider is that the balance is updated after the calls. Let's assume in our `receive()` function, we just write the logic to call the `withdraw()` function twice. The calls will be as follows:
 
@@ -82,9 +82,9 @@ Another thing to consider is that the balance is updated after the calls. Let's 
 
 The key point to understand in the flowchart is that the balance is updated at last and it is updated twice. Suppose we have `1 ether` and we withdraw `1 ether` in each call. At last, our balance will be reduced twice. When it reduces the first time, our balance will be `zero`, and the next time it reduces, there should be an `underflow` or `revert` if the `underflow` is handled properly. If it reverts, all the state changes made will be reverted.
 
-If we check the `Reentrance` contract, the compiler version is less than 0.8.0, which means the contract is vulnerable to `overflows` and `underflows`. However, they are using the `SafeMath` library to overcome the vulnerabilities of overflows and underflows. If we check the `donate()` function, they have properly implemented the `SafeMath` library. But if we check the `withdraw()` function, they didn't use the `SafeMath` library for reducing the caller's balance. The correct syntax for implementing SafeMath for subtraction is `balances[msg.sender].sub(_amount)`.
+If we check the `Reentrance` contract, the compiler version is less than 0.8.0, which means the contract is vulnerable to `overflows` and `underflows`. However, they are using the `SafeMath` library to overcome the vulnerabilities of overflows and underflows. If we check the `donate()` function, they have properly implemented the `SafeMath` library. But if we check the `withdraw()` function, they didn't use the `SafeMath` library to reduce the caller's balance. The correct syntax for implementing SafeMath for subtraction is `balances[msg.sender].sub(_amount)`.
 
-So, as they didn't use SafeMath during the second call while updating the balance, it will lead to an underflow, and our balance will be set to `(2^256 - 1)`. With these two vulnerabilities, we are able to withdraw twice the amount of our balance in the Reentrancy contract.
+So, as they didn't use SafeMath during the second call while updating the balance, it will lead to an underflow, and our balance will be set to `(2^256 - 1)`. With these two vulnerabilities, we can withdraw twice the amount of our balance in the Reentrancy contract.
 
 **Note:** I have written logic to withdraw twice, but it is not limited to that. We can withdraw as many times as we want as long as the contract has a balance.
 
@@ -100,7 +100,7 @@ This will return the balance of the Reentrance contract. The balance of the Reen
 
 Now we need to write an Exploit contract. Click [here](./Exploit/ExploitReentrancy.sol) to view the exploit contract.
 
-In order to completely drain the `Reentrance` contract, we need to call the `Exploit()` function. Once we call the `Exploit()`, the Reentrance contract balance will become zero, and our Exploit contract balance will become `2000000000000000 wei` or `0.002 ether`.
+To completely drain the `Reentrance` contract, we need to call the `Exploit()` function. Once we call the `Exploit()`, the Reentrance contract balance will become zero, and our Exploit contract balance will become `2000000000000000 wei` or `0.002 ether`.
 
 Lastly, don't forget to withdraw 0.002 ether from the Exploit contract to your EOA.
 
@@ -108,7 +108,7 @@ That's it! Now we can submit the instance.
 
 ### Key Takeaways
 
-When our contract logic involves sending ether based on balances, we must adopt the CEI pattern (Checks, Effects, Interactions). First, check for balance, update the balance, and then proceed with the transfer. Compare the below and try to understand the difference.
+When our contract logic involves sending ether based on balances, we must adopt the CEI pattern (Checks, Effects, Interactions). First, check for the balance, update the balance, and then proceed with the transfer. Compare the below and try to understand the difference.
 
 <p align="center">
   <img src="img/img2.png" />
