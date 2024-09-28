@@ -96,10 +96,11 @@ contract B{
 }
 ```
 
-</details>
 If we see the contracts we can observe that in the first contract, we have written the same checks in two functions but in the second one we have written the checks in a modifier and we used a modifier in each function.
 
 When we use `modifier` to a function, the function will first implement the `modifier` logic and then implement the function logic. By using modifiers we can write more optimized code.
+
+</details>
 
 ```solidity
 modifier gateOne() {
@@ -180,10 +181,11 @@ contract contract_two{
 
 ```
 
-</details>
 First deploy `contract_one` then deploy `contract_two`. When we invoke `call_Wish()` in `contract_two` the function will make two level calls to contract_one calling the function `Wish()`. The first will be successful but the second call will revert because we are passing odd number. `Wish()` returns true "hello" only when passing even numbers. If we pass an odd number it will revert.
 
 Even though the inner second call is reverted it is not reverting the main call (call_Wish). This behavior is only due to `low-level call`. When we use `low-level call` if the call is successful it returns `true` else it will return `false`.
+
+</details>
 
 One more key concept to learn is how typecasting works.
 
@@ -216,8 +218,6 @@ contract Type_Casting{
 
 ```
 
-</details>
-
 Make sure you try out this in the remix. When we call the functions `uint96_to_uint48()` and `bytes12_to_bytes6()` the output will be as follows.
 
 <p align="center">
@@ -225,6 +225,8 @@ Make sure you try out this in the remix. When we call the functions `uint96_to_u
 </p>
 
 If we observe the data of `bytes12_to_bytes6()` when **bytes12** is converted to **bytes6** only the first 6 bytes are taken. If we observe the `uint96_to_uint48()` when uint96 is converted to uint48 only the last 48 bits (6 bytes) are taken. You can find the difference by observing `before_conversion` and `after_conversion`. In the `uint96_to_uint48()` you can verify the `converted_val` by converting `0x0000000000000000000000000000000000000000000000000000f750833e31a8` into decimal.
+
+</details>
 
 ### Exploit
 
