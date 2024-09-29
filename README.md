@@ -27,3 +27,4 @@
 - [Privacy](./Ethernaut/Privacy/WriteUp.md)
 - [Gatekeeper One](./Ethernaut/Gatekeeper%20One/WriteUp.md)
 - [Gatekeeper Two](./Ethernaut/Gatekeeper%20Two/WriteUp.md)
+- [Naugth Coin](./Ethernaut/Naught%20Coin/WriteUp.md)
