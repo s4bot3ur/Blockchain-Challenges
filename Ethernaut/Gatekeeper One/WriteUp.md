@@ -8,8 +8,6 @@ Make it past the gatekeeper and register as an entrant to pass this level.
 
 ### Contract Explanation
 
-Click [here] to view the contract.
-
 If you understand the contract, you can move to the [exploit](#exploit) part. If you are a beginner, please go through the Contract Explanation as well. It will help you understand Solidity better.
 
 <details>

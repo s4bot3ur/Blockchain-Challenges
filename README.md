@@ -26,3 +26,4 @@
 - [Elevator](./Ethernaut/Elevator/WriteUp.md)
 - [Privacy](./Ethernaut/Privacy/WriteUp.md)
 - [Gatekeeper One](./Ethernaut/Gatekeeper%20One/WriteUp.md)
+- [Gatekeeper Two](./Ethernaut/Gatekeeper%20Two/WriteUp.md)
