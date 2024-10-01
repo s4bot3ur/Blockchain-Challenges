@@ -116,7 +116,7 @@ However, when we check the `transfer()` function in the `NaughtCoin` contract, i
 
 If we examine the ERC20 contract, we can find that there are two ways of transferring tokens. One method is directly transferring tokens by the owner, and the other method is allowing another account to spend tokens on behalf of the owner. If you haven't reviewed the ERC20 contract, I strongly recommend doing so. You can find the contract [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
 
-```
+```solidity
 function transfer(address to, uint256 value) public virtual returns (bool) {
     address owner = _msgSender();
     _transfer(owner, to, value);
