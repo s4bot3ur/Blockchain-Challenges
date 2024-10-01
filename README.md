@@ -29,3 +29,4 @@
 - [Gatekeeper Two](./Ethernaut/Gatekeeper%20Two/WriteUp.md)
 - [Naugth Coin](./Ethernaut/Naught%20Coin/WriteUp.md)
 - [Preservation](./Ethernaut/Preservation/WriteUp.md)
+- [Recovery](./Ethernaut/Recovery/WriteUp.md)

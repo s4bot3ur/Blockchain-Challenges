@@ -75,7 +75,7 @@
     }
 ```
 
-- This is the last function in the contract. `receive()` is a inbuilt function in solidity. In short to explain receive will be invoked when you interact with contract without any data or function calls. When you send some ether to contract without calling any function then `receive()` will be invoked.
+- This is the last function in the contract. `receive()` is a inbuilt function in solidity. In short to explain receive will be invoked when you interact with contract with data that doesn't match any function selector or without any data. When you send some ether to contract without calling any function then `receive()` will be invoked.
 
 - We can see `receive()` function is checking for `msg.value` is greater than zero or not and if msg.sender already has some contributions or not. If both the conditions are satisfied then it is making **owner** to `msg.sender`.
 
