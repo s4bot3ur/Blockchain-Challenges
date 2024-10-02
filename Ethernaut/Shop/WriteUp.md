@@ -57,6 +57,8 @@ function buy() public {
 
 The function `buy()` initializes the variable `_buyer` of type `Buyer` interface with `msg.sender`. It then checks if the price offered by the buyer is greater than or equal to the current price and if the item has not been sold yet. If both conditions are met, the item is marked as sold and the price is updated to the buyer's price.
 
+</details>
+
 ### Exploit
 
 ```solidity
