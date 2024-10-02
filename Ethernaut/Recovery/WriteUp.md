@@ -1,6 +1,6 @@
 # Writeup for Naught Coin
 
-- Greetings, aspiring hacker! Welcome to the realm of smart contract hacking. By solving the challenges from Ethernaut, you will gain a deeper understanding of Solidity. Each challenge involves deploying a contract and exploiting its vulnerabilities. If you're new to Solidity and haven't deployed a smart contract before, you can learn how to do so using Remix [here](https://youtu.be/3xNFZI8Ste4?si=i3cWN87OpX85zp6k).
+- Hello h4ck3r, welcome to the world of smart contract hacking. Solving the challenges from Ethernaut will help you understand Solidity better. Each challenge involves deploying a contract and exploiting its vulnerabilities. If you're new to Solidity and haven't deployed a smart contract before, you can learn how to do so using Remix [here](https://youtu.be/3xNFZI8Ste4?si=i3cWN87OpX85zp6k).
 
 ### Challenge Description
 
