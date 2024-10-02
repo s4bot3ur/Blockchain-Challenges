@@ -21,7 +21,9 @@ If you understand the contract, you can move on to the [exploit](#exploit) part.
 
 <details>
 <summary>Click to view the source contract and contract explanation</summary>
+
 ```solidity
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -95,14 +97,12 @@ The `Ownable` contract has the state variable `owner` and it is initialized to `
 
 The `Dex` contract has two state variables `token1` and `token2`. Both the state variables are of type address.
 
-```
-
+```solidity
 function setTokens(address \_token1, address \_token2) public onlyOwner {
 token1 = \_token1;
 token2 = \_token2;
 }
-
-````
+```
 
 This function will set the address of `token1` and `token2`.
 
@@ -110,7 +110,7 @@ This function will set the address of `token1` and `token2`.
 function addLiquidity(address token_address, uint256 amount) public onlyOwner {
     IERC20(token_address).transferFrom(msg.sender, address(this), amount);
 }
-````
+```
 
 The above function `addLiquidity()` will take two arguments of type **address** (token_address) and **uint256** (amount) as input. Basically the function will add more tokens of the token_address passed during the call. It can be only called by owner because it has `onlyOwner` modifier.
 
