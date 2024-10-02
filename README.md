@@ -30,3 +30,4 @@
 - [Naugth Coin](./Ethernaut/Naught%20Coin/WriteUp.md)
 - [Preservation](./Ethernaut/Preservation/WriteUp.md)
 - [Recovery](./Ethernaut/Recovery/WriteUp.md)
+- [Alien Codex](./Ethernaut/Alien%20Codex/WriteUp.md)
