@@ -31,3 +31,4 @@
 - [Preservation](./Ethernaut/Preservation/WriteUp.md)
 - [Recovery](./Ethernaut/Recovery/WriteUp.md)
 - [Alien Codex](./Ethernaut/Alien%20Codex/WriteUp.md)
+- [Denial](./Ethernaut/Denial/WriteUp.md)
