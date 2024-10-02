@@ -4,16 +4,11 @@
 
 ### Challenge Description
 
-This contract utilizes a library to store two different times for two different timezones. The constructor creates two instances of the library for each time to be stored.
+The goal of this level is for you to hack the basic DEX contract below and steal the funds by price manipulation.
 
-The goal of this level is for you to claim ownership of the instance you are given.
+You will start with 10 tokens of token1 and 10 of token2. The DEX contract starts with 100 of each token.
 
-Things that might help
-
-- Look into Solidity's documentation on the delegatecall low-level function, how it works, how it can be used to delegate operations to on-chain libraries, and what implications it has on execution scope.
-- Understand what it means for delegatecall to be context-preserving.
-- Understand how storage variables are stored and accessed.
-- Understand how casting works between different data types.
+You will be successful in this level if you manage to drain all of at least 1 of the 2 tokens from the contract, and allow the contract to report a "bad" price of the assets.
 
 ### Contract Explanation
 

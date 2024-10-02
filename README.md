@@ -34,3 +34,4 @@
 - [Denial](./Ethernaut/Denial/WriteUp.md)
 - [Shop](./Ethernaut/Shop/WriteUp.md)
 - [Dex](./Ethernaut/Dex/WriteUp.md)
+- [Dex Two](./Ethernaut/Dex%20Two/WriteUp.md)
