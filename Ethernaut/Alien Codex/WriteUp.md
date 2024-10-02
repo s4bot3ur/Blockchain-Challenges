@@ -154,7 +154,7 @@ From the above equation, we can write `x=(2**256-1)-keccak256(abi.encode(1))`.
 
 `x` will be the index at which the last slot value is stored. If we add 1 to it, it will lead to an `overflow`, and it will be the place where the value of the `zeroth slot` will be stored. Now we can assign the value whatever we want there.
 
-So now our target index is `x+1=(2**256-1)-keccak256(abi.encode(1))+1`.
+So now our target index is `x=(2**256-1)-keccak256(abi.encode(1))+1`.
 
 Below is the exploit contract:
 
