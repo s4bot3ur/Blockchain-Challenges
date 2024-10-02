@@ -29,10 +29,9 @@ import "openzeppelin-contracts-08/token/ERC20/IERC20.sol";
 import "openzeppelin-contracts-08/token/ERC20/ERC20.sol";
 import "openzeppelin-contracts-08/access/Ownable.sol";
 
-```solidity
 contract Dex is Ownable {
-    address public token1;
-    address public token2;
+address public token1;
+address public token2;
 
     constructor() {}
 
@@ -66,10 +65,11 @@ contract Dex is Ownable {
     function balanceOf(address token, address account) public view returns (uint256) {
         return IERC20(token).balanceOf(account);
     }
+
 }
 
 contract SwappableToken is ERC20 {
-    address private _dex;
+address private \_dex;
 
     constructor(address dexInstance, string memory name, string memory symbol, uint256 initialSupply)
         ERC20(name, symbol)
@@ -82,6 +82,7 @@ contract SwappableToken is ERC20 {
         require(owner != _dex, "InvalidApprover");
         super._approve(owner, spender, amount);
     }
+
 }
 
 ```
@@ -95,11 +96,13 @@ The `Ownable` contract has the state variable `owner` and it is initialized to `
 The `Dex` contract has two state variables `token1` and `token2`. Both the state variables are of type address.
 
 ```
-function setTokens(address _token1, address _token2) public onlyOwner {
-    token1 = _token1;
-    token2 = _token2;
+
+function setTokens(address \_token1, address \_token2) public onlyOwner {
+token1 = \_token1;
+token2 = \_token2;
 }
-```
+
+````
 
 This function will set the address of `token1` and `token2`.
 
@@ -107,7 +110,7 @@ This function will set the address of `token1` and `token2`.
 function addLiquidity(address token_address, uint256 amount) public onlyOwner {
     IERC20(token_address).transferFrom(msg.sender, address(this), amount);
 }
-```
+````
 
 The above function `addLiquidity()` will take two arguments of type **address** (token_address) and **uint256** (amount) as input. Basically the function will add more tokens of the token_address passed during the call. It can be only called by owner because it has `onlyOwner` modifier.
 
