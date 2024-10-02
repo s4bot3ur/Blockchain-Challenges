@@ -33,3 +33,4 @@
 - [Alien Codex](./Ethernaut/Alien%20Codex/WriteUp.md)
 - [Denial](./Ethernaut/Denial/WriteUp.md)
 - [Shop](./Ethernaut/Shop/WriteUp.md)
+- [Dex](./Ethernaut/Dex/WriteUp.md)
