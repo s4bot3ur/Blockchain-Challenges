@@ -18,8 +18,6 @@ Things that might help:
 
 The contract `AlienCodex` inherits a contract named `Ownable` with a version of `0.5.0`. The `AlienCodex` contract has two state variables: `contact`, which is a boolean, and `codex`, which is a dynamic array of type `bytes32`.
 
-The `AlienCodex` contract also includes a modifier called `contacted`, which checks if `contact` is true before executing the function. There are several public functions in the contract, including `makeContact()`, which sets `contact` to true, `record(bytes32 _content)`, which adds `_content` to the `codex` array, `retract()`, which reduces the size of the `codex` array by one, and `revise(uint256 i, bytes32 _content)`, which updates the value at index `i` in the `codex` array.
-
 <details>
 <summary>Click to view the source contract and contract explanation</summary>
 
