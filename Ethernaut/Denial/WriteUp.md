@@ -123,9 +123,11 @@ function setWithdrawPartner(address _partner) public {
 
 By calling the above function, we can set the partner to whatever address we pass during the function call.
 
-If we set the partner address as EOA (Externally owned account), it won't be useful because we can't deny. We need to write an `Exploit` contract, and we need to set the Exploit contract as the partner.
+If we set the partner address as EOA (Externally owned account), it won't be useful because we can't reject some one sending ether to our account. We need to write an `Exploit` contract, and we need to set the `Exploit contract` as the partner.
 
-Since the withdraw() function is making a low-level call during the call, it will send the entire gas to the partner. Once the partner transaction is completed, the remaining gas is returned to the withdraw() function, and the remaining gas is used to execute the next lines.
+In general if we want call withdraw() function we need to send some units of gas such that it will be sufficient to execute all the lines in withdraw(). If we send only limited gas the function call will revert.
+
+Since the withdraw() function is making a low-level call during the call, it will send the entire gas (gas required for executing `low-level call` as well as gas required to execute the next lines after `low-level call`) during the `call`. Once the partner transaction is completed, the remaining gas is returned to the withdraw() function, and the remaining gas is used to execute the next lines.
 
 Since the withdraw() function is making a low-level call to the partner (exploit contract), in our exploit contract, if we somehow consume all the gas, then there won't be enough gas to execute the transfer() function, and it will revert the entire function call of withdraw().
 
@@ -146,13 +148,13 @@ contract ExploitDenial{
 
 Deploy this contract and open the console and enter the following
 
+What happens if you use `revert()` instead of `assert()` ? Will it revert all the state changes or reverts only the low-level call function? It will revert only `call()` function because call is designed in such a way that when it is used if the call is successful it will return `true` if the call fails it returns `false`. So if we just use revert() it will only revert the call function but the lines after revert will execute normal way unless return value is handled properly.
+
 ```javascript
 > await contract.setWithdrawPartner("YOUR__EXPLOIT__CONTRACT__ADDRESS")
 ```
 
 Once the transaction is completed, just submit the instance.
-
-### Key Takeaways
 
 ### Key Takeaways
 
