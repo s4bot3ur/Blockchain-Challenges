@@ -32,3 +32,4 @@
 - [Recovery](./Ethernaut/Recovery/WriteUp.md)
 - [Alien Codex](./Ethernaut/Alien%20Codex/WriteUp.md)
 - [Denial](./Ethernaut/Denial/WriteUp.md)
+- [Shop](./Ethernaut/Shop/WriteUp.md)
