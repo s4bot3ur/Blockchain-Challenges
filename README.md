@@ -35,3 +35,4 @@
 - [Shop](./Ethernaut/Shop/WriteUp.md)
 - [Dex](./Ethernaut/Dex/WriteUp.md)
 - [Dex Two](./Ethernaut/Dex%20Two/WriteUp.md)
+- [Puzzle Wallet](./Ethernaut/Puzzle%20Wallet/WriteUp.md)
