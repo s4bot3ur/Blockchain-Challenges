@@ -479,10 +479,6 @@ In the `multicall` function, if we try to call the `deposit()` function twice by
 
 When someone wants to deposit two ether by sending only one ether, they might try to call the `multicall()` function by passing the function selector of `deposit()` in the `data` array twice. However, due to the `require` statement that checks if `depositCalled` is `false`, the transaction will revert on the second call. This prevents depositing twice with a single amount. If there were no `require` statement, it would be possible because `multicall()` is making a delegate call to `deposit()`, and the `msg.sender` and `msg.value` would be the same for each call. Check the below image.
 
-<p align="center">
-  <img src="img/img2.png" />
-</p>
-
 Assume there is no require statment and Suppose if we invoke multicall() with 1ether and data as function selector of deposit() twice then for the first time it will call deposit() and msg.value will be 1 ether and second time it will again call deposit() and msg.value will be 1 ether. So technically we made our balances as `2 ether` by depositing `1 ether`.
 
 Due to the `require` statement, we can't call `deposit()` twice directly. However, if we pass the calldata to invoke `deposit()` as the first element of the `data` array, and then pass the calldata to invoke `multicall()` with the argument as calldata to invoke `deposit()`, we can bypass the `require` check. This way, we can set our balance to 2 ether by sending only 1 ether.
