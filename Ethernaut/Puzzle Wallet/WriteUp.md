@@ -4,15 +4,20 @@
 
 ### Challenge Description
 
-This level will ask you to break DexTwo, a subtly modified Dex contract from the previous level, in a different way.
+Nowadays, paying for DeFi operations is impossible, fact.
 
-To succeed in this level, you need to drain all balances of token1 and token2 from the DexTwo contract.
+A group of friends discovered how to slightly decrease the cost of performing multiple transactions by batching them in one transaction, so they developed a smart contract for doing this.
 
-You will still start with 10 tokens of token1 and 10 of token2. The DEX contract still starts with 100 of each token.
+They needed this contract to be upgradeable in case the code contained a bug, and they also wanted to prevent people from outside the group from using it. To do so, they voted and assigned two people with special roles in the system: The admin, which has the power of updating the logic of the smart contract. The owner, which controls the whitelist of addresses allowed to use the contract. The contracts were deployed, and the group was whitelisted. Everyone cheered for their accomplishments against evil miners.
+
+Little did they know, their lunch money was at risk…
+
+You'll need to hijack this wallet to become the admin of the proxy.
 
 Things that might help:
 
-How has the swap method been modified?
+- Understanding how delegatecall works and how msg.sender and msg.value behaves when performing one.
+- Knowing about proxy patterns and the way they handle storage variables.
 
 ### Key Concepts To Learn
 
