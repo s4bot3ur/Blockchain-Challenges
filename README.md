@@ -37,3 +37,4 @@
 - [Dex Two](./Ethernaut/Dex%20Two/WriteUp.md)
 - [Puzzle Wallet](./Ethernaut/Puzzle%20Wallet/WriteUp.md)
 - [DoubleEntryPoint](./Ethernaut/DoubleEntryPoint/WriteUp.md)
+- [Good Samaritan](./Ethernaut/Good%20Samaritan/WriteUp.md)
