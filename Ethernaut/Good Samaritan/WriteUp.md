@@ -106,7 +106,7 @@ Deploy the FortaA contract first and then Deploy Forta contract. Once you deploy
 
 If you understand the contract, you can move on to the [exploit](#exploit) part. If you're a beginner, please read the Contract Explanation to gain a better understanding of Solidity.
 
-Click [here](./src/contracts/DoubleEntryPoint.sol) to view the contract source code.
+Click [here](./src/contracts/GoodSamaritan.sol) to view the contract source code.
 
 <details>
 <summary>Click to view the contract explanation</summary>
@@ -142,49 +142,6 @@ contract GoodSamaritan {
     }
 }
 
-contract Wallet {
-    // The owner of the wallet instance
-    address public owner;
-
-    Coin public coin;
-
-    error OnlyOwner();
-    error NotEnoughBalance();
-
-    modifier onlyOwner() {
-        if (msg.sender != owner) {
-            revert OnlyOwner();
-        }
-        _;
-    }
-
-    constructor() {
-        owner = msg.sender;
-    }
-
-    function donate10(address dest_) external onlyOwner {
-        // check balance left
-        if (coin.balances(address(this)) < 10) {
-            revert NotEnoughBalance();
-        } else {
-            // donate 10 coins
-            coin.transfer(dest_, 10);
-        }
-    }
-
-    function transferRemainder(address dest_) external onlyOwner {
-        // transfer balance left
-        coin.transfer(dest_, coin.balances(address(this)));
-    }
-
-    function setCoin(Coin coin_) external onlyOwner {
-        coin = coin_;
-    }
-}
-
-interface INotifyable {
-    function notify(uint256 amount) external;
-}
 
 ```
 
