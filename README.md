@@ -38,3 +38,4 @@
 - [Puzzle Wallet](./Ethernaut/Puzzle%20Wallet/WriteUp.md)
 - [DoubleEntryPoint](./Ethernaut/DoubleEntryPoint/WriteUp.md)
 - [Good Samaritan](./Ethernaut/Good%20Samaritan/WriteUp.md)
+- [Gatekeeper Three](./Ethernaut/Gatekeeper%20Three/WriteUp.md)
