@@ -41,3 +41,4 @@
 - [Gatekeeper Three](./Ethernaut/Gatekeeper%20Three/WriteUp.md)
 - [Switch](./Ethernaut/Switch/WriteUp.md)
 - [Higher Order](./Ethernaut/Higher%20Order/WriteUp.md)
+- [Stake](./Ethernaut/Stake/WriteUp.md)
