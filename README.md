@@ -39,3 +39,4 @@
 - [DoubleEntryPoint](./Ethernaut/DoubleEntryPoint/WriteUp.md)
 - [Good Samaritan](./Ethernaut/Good%20Samaritan/WriteUp.md)
 - [Gatekeeper Three](./Ethernaut/Gatekeeper%20Three/WriteUp.md)
+- [Switch](./Ethernaut/Switch/WriteUp.md)
