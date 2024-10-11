@@ -24,7 +24,7 @@ The functions CALLDATASIZE, CALLDATALOAD, CALLDATACOPY are such low-level functi
 
    - **Example:** If you call a function in a contract and the function does not accept any arguments, the calldata will consist only of the function selector. In this case, `CALLDATASIZE` will return 4, as the function selector is 4 bytes long.
 
-2. **CALLDATALOAD:** This opcode will push 32 bytes of transaction data onto the stack.
+2. **CALLDATALOAD(start_byte):** This opcode pushes 32 bytes of transaction data onto the stack, starting from start_byte.
 
    - **Example:** If you call a function in a contract that accepts two arguments of type `uint256` and `uint256`, `CALLDATALOAD` will push the function selector and the first 28 bytes of the first argument onto the stack.
 
@@ -139,7 +139,7 @@ Whatever examples you see there, try those examples in your terminal using `cast
 
 If you understand the contract, you can move on to the [exploit](#exploit) part. If you're a beginner, please read the Contract Explanation to gain a better understanding of Solidity.
 
-Click [here](./src/contracts/GatekeeperThree.sol) to view the contract source code.
+Click [here](./src/contracts/Switch.sol) to view the contract source code.
 
 <details>
 <summary>Click to view the contract explanation</summary>

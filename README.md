@@ -40,3 +40,4 @@
 - [Good Samaritan](./Ethernaut/Good%20Samaritan/WriteUp.md)
 - [Gatekeeper Three](./Ethernaut/Gatekeeper%20Three/WriteUp.md)
 - [Switch](./Ethernaut/Switch/WriteUp.md)
+- [Higher Order](./Ethernaut/Higher%20Order/WriteUp.md)
