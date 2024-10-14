@@ -4,3 +4,9 @@
 [submodule "TCP1P-2024/Executive Problem/lib/forge-std"]
 	path = TCP1P-2024/Executive Problem/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "TCP1P-2024/Inju's Gambit/lib/forge-std"]
+	path = TCP1P-2024/Inju's Gambit/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "TCP1P-2024/Unsolveable Money Captcha/lib/forge-std"]
+	path = TCP1P-2024/Unsolveable Money Captcha/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

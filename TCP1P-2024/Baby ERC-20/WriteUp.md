@@ -154,6 +154,8 @@ $ forge script script/ExploitScript.s.sol:ExploitScript --rpc-url http://ctf.tcp
 
 Once you compile and run the script the challenge will be solved. If you face any copiler version issues set `solc_version = "0.6.12"` in foundry.toml
 
+**Flag:** `TCP1P{https://x.com/0xCharlesWang/status/1782350590946799888}`
+
 ### Key Takeaways
 
 For solidity versions less than 0.8.0, we need to explicitly handle the overflows and underflows. We can use the [SafeMath](https://github.com/aave/protocol-v2/blob/master/contracts/dependencies/openzeppelin/contracts/SafeMath.sol) library to overcome those.

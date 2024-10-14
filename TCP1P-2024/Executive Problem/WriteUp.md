@@ -1,4 +1,4 @@
-# Writeup for BABY ERC-20
+# Writeup for Executive Problem
 
 - Hello h4ck3r, welcome to the world of smart contract hacking. In order to understand this writeup you need to understand foundry.
 
@@ -206,5 +206,7 @@ $ forge script script/ExploitExecutive.s.sol:ExploitExecutive2 --rpc-url http://
 ```
 
 Any of the above two scripts will work; you can use either one. The only difference between the two scripts is how we get the ether. I hope you This writeup is helpful.
+
+**Flag:** `TCP1P{Imagine_getting_kicked_out_like_that_by_s0m3_3Xecu7iVE}`
 
 <p style="text-align:center;">***<strong>Hope you enjoyed this write-up. Keep on hacking and learning!</strong>***</p>

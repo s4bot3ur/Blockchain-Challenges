@@ -48,3 +48,6 @@
 
 - [Baby ERC0-20](./TCP1P-2024/Baby%20ERC-20/WriteUp.md)
 - [Executive Problem](./TCP1P-2024/Executive%20Problem/WriteUp.md)
+- [Unsolveable Money Captcha](./TCP1P-2024/Unsolveable%20Money%20Captcha/WriteUp.md)
+- [Inju's Gambit](./TCP1P-2024/Inju's%20Gambit/WriteUp.md)
+- [Minercraft Huh](./TCP1P-2024/Minercraft%20huh/WriteUp.md)
