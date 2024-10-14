@@ -9,6 +9,7 @@
 #### Ethereum
 
 - [Ethernaut](#ethernaut)
+- [TCP1P-2024](#TCP1P-2024)
 
 #### Ethernaut
 
@@ -42,3 +43,7 @@
 - [Switch](./Ethernaut/Switch/WriteUp.md)
 - [Higher Order](./Ethernaut/Higher%20Order/WriteUp.md)
 - [Stake](./Ethernaut/Stake/WriteUp.md)
+
+#### TCP1P-2024
+
+- [Baby ERC0-20](./TCP1P-2024/Baby%20ERC-20/WriteUp.md)
