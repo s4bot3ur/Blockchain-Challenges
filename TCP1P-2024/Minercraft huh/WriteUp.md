@@ -71,9 +71,9 @@ In the same way, we need to find transactions in each block and decode the input
 
 In the search for the flag, I have found some fake flags and some texts.
 
-fake-flag 1: TCP3P{this_is_one_p_not_three_p}
-text 1: Oh, I changed my mind again!
-text 2: Nah, that does not sound good
+fake-flag 1: TCP3P{this_is_one_p_not_three_p}  
+text 1: Oh, I changed my mind again!  
+text 2: Nah, that does not sound good  
 text 3: TCP1P....
 
 So finally in block number 6 i got the original flag.
@@ -90,7 +90,7 @@ So finally in block number 6 i got the original flag.
   <img src="img/img8.png" />
 </p>
 
-**Flag :** `TCP1P{running_through_some_blocks_have_you?}`
+**Flag:** `TCP1P{running_through_some_blocks_have_you?}`
 
 ### Key Takeaways
 
