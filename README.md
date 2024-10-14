@@ -47,3 +47,4 @@
 #### TCP1P-2024
 
 - [Baby ERC0-20](./TCP1P-2024/Baby%20ERC-20/WriteUp.md)
+- [Executive Problem](./TCP1P-2024/Executive%20Problem/WriteUp.md)
