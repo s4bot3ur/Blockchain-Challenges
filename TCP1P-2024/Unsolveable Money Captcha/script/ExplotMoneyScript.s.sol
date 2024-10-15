@@ -7,7 +7,7 @@ import {ExploitMoney} from "./ExploitMoney.sol";
 contract ExploitMoneyScript is Script {
     function run() public {
         vm.startBroadcast();
-        ExploitMoney exploitmoney = new ExploitMoney{value: 0.5 ether}();
+        ExploitMoney exploitmoney = new ExploitMoney{value: 10 ether}();
         exploitmoney.Exploit();
         vm.stopBroadcast();
     }
