@@ -10,3 +10,9 @@
 [submodule "TCP1P-2024/Unsolveable Money Captcha/lib/forge-std"]
 	path = TCP1P-2024/Unsolveable Money Captcha/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "EVM/2025/lib/forge-std"]
+	path = EVM/2025/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "EVM/2025/lib/openzeppelin-contracts"]
+	path = EVM/2025/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts

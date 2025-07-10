@@ -7,6 +7,11 @@
 
 
 ### 2025
+- [R3-2025](#R3-2025)
+- [BITS-2025](#BITS-2025)
+- [HTB-CyberApocalypse-2025](#HTB-CyberApocalypse-2025)
+- [PWNME-2025](#PWNME-2025)
+- [SMILEY-2025](#SMILEY-2025)
 
 ### 2024
 - [Crew-2024](#Crew-2024)
@@ -53,6 +58,23 @@
 - [Higher Order](./Ethernaut/Higher%20Order/WriteUp.md)
 - [Stake](./Ethernaut/Stake/WriteUp.md)
 
+#### R3-2025
+- [SignIn](./2025/script/R3-2025/SignIn/solution/Solve.s.sol)
+
+#### BITS-2025
+- [SeedFund](./2025/script/BITS-2025/SeedFund/solution/Solve.s.sol)
+
+#### HTB-CyberApocalypse-2025
+- [Eldorion](./2025/script/HTB-CyberApocalypse-2025/Eldorion/solution/Solve.s.sol)
+- [EldoriaGate](./2025/script/HTB-CyberApocalypse-2025/EldoriaGate/Solution/Solve.s.sol)
+- [Helios-Dex](./2025/script/HTB-CyberApocalypse-2025/Helios-Dex/solution/Solve.s.sol)
+
+#### PWNME-2025
+- [Mafia-At-The-End-Of-Block-2](./2025/script/PWNME-2025/Mafia-At-The-End-Of-Block-2/solution/Solve.s.sol)
+
+#### SMILEY-2025
+- [MultiSig-Wallet](./2025/script/SMILEY-2025/MultiSig-Wallet/solution/Solve.s.sol)
+
 #### Crew-2024
 - [Tree](./2024/CREW-2024/Tree/script/Solve.s.sol)
 
@@ -97,12 +119,5 @@
 #### Seccon-2024
 - [TrillionEther](./2024/Seccon-24/TrillionEther/script/Solve.s.sol)
 
-
-
-#### HTB-CyberApocalypse-2025
-- [Eldorion](./2025/HTB-CyberApocalypse-2025/Eldorion/script/Exploit.s.sol)
-- [EldoriaGate](./2025/HTB-CyberApocalypse-2025/ElodriaGate/)
-
-#### PWNME-2025
 
 
