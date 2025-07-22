@@ -1,66 +1,27 @@
-## Foundry
+# 2025 Challs
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Setting Up Challenges Locally
+Follow the steps below to set up and solve the challenges locally.
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. Deploy a Challenge
+Use the following command to deploy the challenge you want to solve:
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```bash
+make deploy CTF=$CTF_NAME CHALL=$CHALL_NAME
 ```
-
-### Test
-
-```shell
-$ forge test
+- CTF_NAME is the folder name of the CTF.
+- CHALL_NAME is the folder name of the specific challenge within that CTF.
+2. Run the Exploit Script
+Use the command below to run the exploit script:
+```bash
+make solve CTF=$CTF_NAME CHALL=$CHALL_NAME 
 ```
+By default, this runs the script located at:
+`script/CTF_NAME/CHALL_NAME/Exploit.s.sol:Exploit`
 
-### Format
+## Notes
+- You can find the reference solution for each challenge at:
+`script/CTF_NAME/CHALL_NAME/solution/Exploit.s.sol`
 
-```shell
-$ forge fmt
-```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
