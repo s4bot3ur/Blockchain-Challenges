@@ -7,7 +7,7 @@
 
 
 ### 2025
-- [DEFCAMP-2025]()(#DEFCAMP-2025)
+- [DEFCAMP-2025](#DEFCAMP-2025)
 - [R3-2025](#R3-2025)
 - [BITS-2025](#BITS-2025)
 - [HTB-CyberApocalypse-2025](#HTB-CyberApocalypse-2025)
