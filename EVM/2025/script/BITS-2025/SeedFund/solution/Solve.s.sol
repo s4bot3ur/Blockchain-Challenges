@@ -2,13 +2,24 @@ pragma solidity ^0.8.0;
 
 import {Script} from "forge-std/Script.sol";
 import {AngelInvestor} from "src/BITS-2025/SeedFund/AngelInvestor.sol";
-
+import "forge-std/StdJson.sol"; 
 
 
 contract Solve is Script{
+    using stdJson for string;
     function run()public{
-        AngelInvestor angel=AngelInvestor(0x5FbDB2315678afecb367f032d93F642f64180aa3);
+        address _angel;
+        string memory Setup_path=string.concat("broadcast/Deploy.s.sol/", vm.toString(block.chainid), "/run-latest.json");
+        try vm.readFile(Setup_path){
+            string memory json = vm.readFile(Setup_path);
+            address deployed = json.readAddress(".transactions[0].contractAddress");
+            _angel=deployed;
+        }catch{
+            revert("Challenge Not Yet Deployed");
+        }
+        
         vm.startBroadcast();
+        AngelInvestor angel=AngelInvestor(_angel);
         Exploit exploit =new Exploit(address(angel));
         exploit.pwn();
         require(angel.isChallSolved(),"Exploit Failed");

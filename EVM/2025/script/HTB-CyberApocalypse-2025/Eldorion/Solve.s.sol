@@ -1,6 +1,5 @@
 pragma solidity ^0.8.26;
 
-
 import {Script} from "forge-std/Script.sol";
 
 import {Setup} from "src/HTB-CyberApocalypse-2025/Eldorion/Setup.sol";
@@ -24,21 +23,11 @@ contract Solve is Script{
 
         vm.startBroadcast();
         Setup setup=Setup(_setup);
-        Eldorion _eldorion=setup.TARGET();
-        Exploit exploit=new Exploit();
-        exploit.pwn(_eldorion); 
-        require(setup.isSolved(),"Exploit Failed");
+        /*
+        Implement your solution from here.
+        */
+        require(setup.isSolved(),"Chall Not Solved");
         vm.stopBroadcast();
     }
 
-}
-
-
-contract Exploit{
-
-    function pwn(Eldorion _eldorion)public{
-        for(uint256 i=0;i<3;i++){
-            _eldorion.attack(100);
-        }
-    }
 }

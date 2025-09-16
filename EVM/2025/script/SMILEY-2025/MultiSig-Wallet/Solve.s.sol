@@ -1,16 +1,12 @@
-pragma solidity ^0.8.26;
-
-
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
 import {Script} from "forge-std/Script.sol";
-
-import {Setup} from "src/HTB-CyberApocalypse-2025/Eldorion/Setup.sol";
-import {Eldorion} from "src/HTB-CyberApocalypse-2025/Eldorion/Eldorion.sol";
+import {SetupLocker,Locker,signature} from "src/SMILEY-2025/MultiSig-Wallet/Locker.sol";
 import "forge-std/StdJson.sol"; 
-
 
 contract Solve is Script{
     using stdJson for string;
-
+    
     function run()public{
         address _setup;
         string memory Setup_path=string.concat("broadcast/Deploy.s.sol/", vm.toString(block.chainid), "/run-latest.json");
@@ -21,24 +17,13 @@ contract Solve is Script{
         }catch{
             revert("Challenge Not Yet Deployed");
         }
-
         vm.startBroadcast();
-        Setup setup=Setup(_setup);
-        Eldorion _eldorion=setup.TARGET();
-        Exploit exploit=new Exploit();
-        exploit.pwn(_eldorion); 
-        require(setup.isSolved(),"Exploit Failed");
+        SetupLocker setup=SetupLocker(_setup);
+        /*
+        Implement your solution from here.
+        */
+        require(setup.isSolved(),"Chall Not Solved");
         vm.stopBroadcast();
     }
-
 }
 
-
-contract Exploit{
-
-    function pwn(Eldorion _eldorion)public{
-        for(uint256 i=0;i<3;i++){
-            _eldorion.attack(100);
-        }
-    }
-}
