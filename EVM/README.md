@@ -7,6 +7,7 @@
 
 
 ### 2025
+- [DEFCAMP-2025]()(#DEFCAMP-2025)
 - [R3-2025](#R3-2025)
 - [BITS-2025](#BITS-2025)
 - [HTB-CyberApocalypse-2025](#HTB-CyberApocalypse-2025)
@@ -58,6 +59,8 @@
 - [Higher Order](./Ethernaut/Higher%20Order/WriteUp.md)
 - [Stake](./Ethernaut/Stake/WriteUp.md)
 
+#### DEFCAMP-2025
+- [I-Tem-U](./2025/script/DEFCAMP-2025/I-Tem-U/solution/Solve.s.sol)
 #### R3-2025
 - [SignIn](./2025/script/R3-2025/SignIn/solution/Solve.s.sol)
 
