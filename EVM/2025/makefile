@@ -5,6 +5,7 @@ export PLAYER_ADDR=0x915f794B36Fd328D362445e3BD66ae4f3A894389
 
 
 deploy:
+	rm -rf broadcast/ && \
 	forge script script/$(CTF)/$(CHALL)/Deploy.s.sol:Deploy --private-key $(ANVIL_PK) --rpc-url $(ANVIL_RPC) --broadcast
 
 solve:
@@ -15,4 +16,4 @@ run-solution:
 
 
 anvil:
-	anvil -a 1 --balance 1000000000000000000
+	anvil -a 1 --balance 1000000000000000000 --disable-code-size-limit
